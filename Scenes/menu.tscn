@@ -6,17 +6,17 @@
 script = ExtResource("1_toxqe")
 
 [node name="play" type="Button" parent="."]
-offset_left = 411.0
-offset_top = 82.0
-offset_right = 753.0
-offset_bottom = 185.0
+offset_left = 208.0
+offset_top = 483.0
+offset_right = 550.0
+offset_bottom = 586.0
 text = "Play"
 
 [node name="quit" type="Button" parent="."]
-offset_left = 411.0
-offset_top = 209.0
-offset_right = 753.0
-offset_bottom = 312.0
+offset_left = 209.0
+offset_top = 632.0
+offset_right = 551.0
+offset_bottom = 735.0
 text = "Quit"
 
 [connection signal="child_entered_tree" from="play" to="." method="_on_play_child_entered_tree"]

@@ -11,42 +11,42 @@
 script = ExtResource("1_tiyl6")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(182, 309)
+position = Vector2(383, 220)
 texture = ExtResource("2_eqlhr")
 
 [node name="element1" type="Button" parent="."]
-offset_left = 938.0
-offset_top = 68.0
-offset_right = 1069.0
-offset_bottom = 196.0
+offset_left = 84.0
+offset_top = 1079.0
+offset_right = 215.0
+offset_bottom = 1207.0
 
 [node name="element2" type="Button" parent="."]
-offset_left = 939.0
-offset_top = 214.0
-offset_right = 1070.0
-offset_bottom = 341.0
+offset_left = 294.0
+offset_top = 1072.0
+offset_right = 425.0
+offset_bottom = 1199.0
 
 [node name="element3" type="Button" parent="."]
-offset_left = 938.0
-offset_top = 361.0
-offset_right = 1071.0
-offset_bottom = 492.0
+offset_left = 493.0
+offset_top = 1077.0
+offset_right = 626.0
+offset_bottom = 1208.0
 
 [node name="Boss1" type="Node2D" parent="."]
 script = ExtResource("1_lmpmy")
 
 [node name="Basefire" type="Sprite2D" parent="."]
-position = Vector2(1004, 132)
+position = Vector2(148, 1140)
 scale = Vector2(2.25, 2.13672)
 texture = ExtResource("4_335sl")
 
 [node name="Baseice" type="Sprite2D" parent="."]
-position = Vector2(1004.25, 277.75)
+position = Vector2(359, 1135)
 scale = Vector2(2.17969, 2.19531)
 texture = ExtResource("5_4tkwi")
 
 [node name="Basephysical" type="Sprite2D" parent="."]
-position = Vector2(1004, 425.75)
+position = Vector2(560, 1139)
 scale = Vector2(2.21875, 2.19531)
 texture = ExtResource("6_0hhvv")
 

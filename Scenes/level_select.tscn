@@ -13,10 +13,10 @@ offset_bottom = 112.0
 text = "Level 1"
 
 [node name="menu" type="Button" parent="."]
-offset_left = 920.0
-offset_top = 553.0
-offset_right = 1143.0
-offset_bottom = 638.0
+offset_left = 476.0
+offset_top = 1164.0
+offset_right = 699.0
+offset_bottom = 1249.0
 text = "menu"
 
 [connection signal="pressed" from="level_1" to="." method="_on_level_1_pressed"]
