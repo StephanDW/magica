@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnn4uluhvara2"]
+
+[ext_resource type="Script" path="res://Scripts/Scenes/level_select.gd" id="1_ymxxo"]
+
+[node name="level_select" type="Node2D"]
+script = ExtResource("1_ymxxo")
+
+[node name="level_1" type="Button" parent="."]
+offset_left = 31.0
+offset_top = 27.0
+offset_right = 254.0
+offset_bottom = 112.0
+text = "Level 1"
+
+[node name="menu" type="Button" parent="."]
+offset_left = 920.0
+offset_top = 553.0
+offset_right = 1143.0
+offset_bottom = 638.0
+text = "menu"
+
+[connection signal="pressed" from="level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

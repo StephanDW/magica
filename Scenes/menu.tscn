@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm6v6siti4al7"]
+
+[ext_resource type="Script" path="res://Scripts/Scenes/menu.gd" id="1_toxqe"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_toxqe")
+
+[node name="play" type="Button" parent="."]
+offset_left = 411.0
+offset_top = 82.0
+offset_right = 753.0
+offset_bottom = 185.0
+text = "Play"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 411.0
+offset_top = 209.0
+offset_right = 753.0
+offset_bottom = 312.0
+text = "Quit"
+
+[connection signal="child_entered_tree" from="play" to="." method="_on_play_child_entered_tree"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

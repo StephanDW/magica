@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://7vhlc4x4h6i8"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/Level1/boss1.gd" id="1_lmpmy"]
+[ext_resource type="Script" path="res://Scripts/Levels/Level1/level_1.gd" id="1_tiyl6"]
+[ext_resource type="Texture2D" uid="uid://c4eho0f60v7p0" path="res://graphics/icon.svg" id="2_eqlhr"]
+[ext_resource type="Texture2D" uid="uid://b0wcg0j710c6k" path="res://graphics/elements/basefire.png" id="4_335sl"]
+[ext_resource type="Texture2D" uid="uid://cecp8kjo43n5n" path="res://graphics/elements/baseice.png" id="5_4tkwi"]
+[ext_resource type="Texture2D" uid="uid://dcibsh1ga5m87" path="res://graphics/elements/basephysical.png" id="6_0hhvv"]
+
+[node name="level_1" type="Node2D"]
+script = ExtResource("1_tiyl6")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(182, 309)
+texture = ExtResource("2_eqlhr")
+
+[node name="element1" type="Button" parent="."]
+offset_left = 938.0
+offset_top = 68.0
+offset_right = 1069.0
+offset_bottom = 196.0
+
+[node name="element2" type="Button" parent="."]
+offset_left = 939.0
+offset_top = 214.0
+offset_right = 1070.0
+offset_bottom = 341.0
+
+[node name="element3" type="Button" parent="."]
+offset_left = 938.0
+offset_top = 361.0
+offset_right = 1071.0
+offset_bottom = 492.0
+
+[node name="Boss1" type="Node2D" parent="."]
+script = ExtResource("1_lmpmy")
+
+[node name="Basefire" type="Sprite2D" parent="."]
+position = Vector2(1004, 132)
+scale = Vector2(2.25, 2.13672)
+texture = ExtResource("4_335sl")
+
+[node name="Baseice" type="Sprite2D" parent="."]
+position = Vector2(1004.25, 277.75)
+scale = Vector2(2.17969, 2.19531)
+texture = ExtResource("5_4tkwi")
+
+[node name="Basephysical" type="Sprite2D" parent="."]
+position = Vector2(1004, 425.75)
+scale = Vector2(2.21875, 2.19531)
+texture = ExtResource("6_0hhvv")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="element1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="element2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="element3" to="." method="_on_button_pressed"]
+[connection signal="ready" from="Boss1" to="." method="_on_boss_1_ready"]
