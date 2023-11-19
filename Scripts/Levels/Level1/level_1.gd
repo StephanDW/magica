@@ -13,7 +13,9 @@ func _ready():
 	
 	GODOT.hp = 100
 	PLAYER.hp = 100
-	print(GODOT.hp)
+	
+	$bosshp.value = GODOT.hp
+	$playerhp.value = PLAYER.hp
 
 func _on_button_pressed():
 	var damage = 0
@@ -28,10 +30,12 @@ func _on_button_pressed():
 		damage += 10
 	
 	GODOT.BossDamage("",damage)
+	$bosshp.value = GODOT.hp
 	if (GODOT.hp <= 0):
 		get_tree().change_scene_to_file("res://scenes/level_end.tscn")
 	
 	PLAYER.playerDamage(5)
+	$playerhp.value = PLAYER.hp
 	if (PLAYER.hp <= 0):
 		get_tree().change_scene_to_file("res://scenes/level_end.tscn")
 

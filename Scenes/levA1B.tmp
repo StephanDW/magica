@@ -61,9 +61,8 @@ stretch_mode = 4
 [node name="bosshp" parent="." instance=ExtResource("10_n8vkw")]
 offset_left = 182.0
 offset_top = 47.0
-offset_right = 577.0
-offset_bottom = 85.0
-value = 60.0
+offset_right = 569.0
+offset_bottom = 83.0
 tint_progress = Color(0.839216, 0.0980392, 0.247059, 1)
 
 [node name="playerhp" parent="." instance=ExtResource("10_n8vkw")]
