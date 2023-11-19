@@ -1,57 +1,66 @@
-[gd_scene load_steps=7 format=3 uid="uid://7vhlc4x4h6i8"]
+[gd_scene load_steps=10 format=3 uid="uid://7vhlc4x4h6i8"]
 
 [ext_resource type="Script" path="res://Scripts/Levels/Level1/boss1.gd" id="1_lmpmy"]
 [ext_resource type="Script" path="res://Scripts/Levels/Level1/level_1.gd" id="1_tiyl6"]
 [ext_resource type="Texture2D" uid="uid://c4eho0f60v7p0" path="res://graphics/icon.svg" id="2_eqlhr"]
 [ext_resource type="Texture2D" uid="uid://b0wcg0j710c6k" path="res://graphics/elements/basefire.png" id="4_335sl"]
 [ext_resource type="Texture2D" uid="uid://cecp8kjo43n5n" path="res://graphics/elements/baseice.png" id="5_4tkwi"]
+[ext_resource type="Texture2D" uid="uid://dvxpinbog8fup" path="res://graphics/elements/pressedfire.png" id="5_gwbvh"]
 [ext_resource type="Texture2D" uid="uid://dcibsh1ga5m87" path="res://graphics/elements/basephysical.png" id="6_0hhvv"]
+[ext_resource type="Texture2D" uid="uid://ril7oghcnket" path="res://graphics/elements/pressedwater.png" id="7_0y8m1"]
+[ext_resource type="Texture2D" uid="uid://p7adbnlcglav" path="res://graphics/elements/pressedphysical.png" id="9_5ldma"]
 
 [node name="level_1" type="Node2D"]
 script = ExtResource("1_tiyl6")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(383, 220)
+position = Vector2(377, 212)
 texture = ExtResource("2_eqlhr")
 
 [node name="element1" type="Button" parent="."]
-offset_left = 84.0
-offset_top = 1079.0
-offset_right = 215.0
-offset_bottom = 1207.0
-
-[node name="element2" type="Button" parent="."]
-offset_left = 294.0
-offset_top = 1072.0
-offset_right = 425.0
-offset_bottom = 1199.0
-
-[node name="element3" type="Button" parent="."]
-offset_left = 493.0
-offset_top = 1077.0
-offset_right = 626.0
-offset_bottom = 1208.0
+offset_left = 292.0
+offset_top = 626.0
+offset_right = 441.0
+offset_bottom = 710.0
+text = "Cast"
 
 [node name="Boss1" type="Node2D" parent="."]
 script = ExtResource("1_lmpmy")
 
-[node name="Basefire" type="Sprite2D" parent="."]
-position = Vector2(148, 1140)
-scale = Vector2(2.25, 2.13672)
-texture = ExtResource("4_335sl")
+[node name="elem1" type="TextureButton" parent="."]
+offset_left = 66.0
+offset_top = 975.0
+offset_right = 213.0
+offset_bottom = 1127.0
+toggle_mode = true
+texture_normal = ExtResource("4_335sl")
+texture_pressed = ExtResource("5_gwbvh")
+stretch_mode = 4
 
-[node name="Baseice" type="Sprite2D" parent="."]
-position = Vector2(359, 1135)
-scale = Vector2(2.17969, 2.19531)
-texture = ExtResource("5_4tkwi")
+[node name="elem2" type="TextureButton" parent="."]
+offset_left = 278.0
+offset_top = 971.0
+offset_right = 428.0
+offset_bottom = 1118.0
+toggle_mode = true
+texture_normal = ExtResource("5_4tkwi")
+texture_pressed = ExtResource("7_0y8m1")
+stretch_mode = 4
 
-[node name="Basephysical" type="Sprite2D" parent="."]
-position = Vector2(560, 1139)
-scale = Vector2(2.21875, 2.19531)
-texture = ExtResource("6_0hhvv")
+[node name="elem3" type="TextureButton" parent="."]
+offset_left = 489.0
+offset_top = 971.0
+offset_right = 650.0
+offset_bottom = 1116.0
+toggle_mode = true
+texture_normal = ExtResource("6_0hhvv")
+texture_pressed = ExtResource("9_5ldma")
+stretch_mode = 4
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="element1" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="element2" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="element3" to="." method="_on_button_pressed"]
 [connection signal="ready" from="Boss1" to="." method="_on_boss_1_ready"]
+[connection signal="toggled" from="elem1" to="." method="_on_elem_1_toggled"]
+[connection signal="toggled" from="elem1" to="." method="_on_texture_button_toggled"]
+[connection signal="toggled" from="elem2" to="." method="_on_elem_2_toggled"]
+[connection signal="toggled" from="elem3" to="." method="_on_elem_3_toggled"]
