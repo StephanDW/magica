@@ -9,5 +9,5 @@ func BossDamage(type, damage):
 	print("Boss HP:", hp)
 
 	# Optionally, you can add logic to check if the boss is defeated.
-	if hp <= 0:
+	if (hp <= 0):
 		print("BOSS IS DEAD HEHEHEHE")
