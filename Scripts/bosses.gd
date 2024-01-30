@@ -10,3 +10,9 @@ func BossDamage(type, damage):
 
 	if (hp <= 0):
 		print("BOSS IS DEAD HEHEHEHE")
+
+func getBossHP():
+	return hp
+
+func setBossHP(newhp):
+	hp = newhp

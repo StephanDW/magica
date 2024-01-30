@@ -1,31 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://v8d4m0jk08mr"]
+[gd_scene load_steps=3 format=3 uid="uid://v8d4m0jk08mr"]
+
+[ext_resource type="Script" path="res://Scripts/Levels/Level1/level_end.gd" id="1_evghd"]
 
 [sub_resource type="GDScript" id="GDScript_7j2y8"]
-script/source = "extends Node
+script/source = "extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if ($level_1.GODOT.getBossHP() <= 0):
+		print(\"you win\")
+	else:
+		print(\"you lose\")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_button_pressed():
-	get_tree().change_scene_to_file(\"res://scenes/level_select.tscn\")
+func _draw():
+	scale;
 "
 
 [node name="level_end" type="Node2D"]
-script = SubResource("GDScript_7j2y8")
+script = ExtResource("1_evghd")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 143.0
-offset_top = 583.0
-offset_right = 608.0
-offset_bottom = 739.0
+offset_left = 8.0
+offset_top = 406.0
+offset_right = 473.0
+offset_bottom = 562.0
 text = "RETURN"
 script = SubResource("GDScript_7j2y8")
 metadata/_edit_use_anchors_ = true

@@ -30,8 +30,8 @@ func _on_button_pressed():
 		damage += 10
 	
 	GODOT.BossDamage("",damage)
-	$bosshp.value = GODOT.hp
-	if (GODOT.hp <= 0):
+	$bosshp.value = GODOT.getBossHP()
+	if (GODOT.getBossHP() <= 0):
 		get_tree().change_scene_to_file("res://scenes/level_end.tscn")
 	
 	PLAYER.playerDamage(5)
