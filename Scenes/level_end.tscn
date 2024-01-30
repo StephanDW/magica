@@ -13,8 +13,6 @@ func _ready():
 	else:
 		print(\"you lose\")
 
-func _draw():
-	scale;
 "
 
 [node name="level_end" type="Node2D"]
