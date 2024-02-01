@@ -32,11 +32,13 @@ func _on_button_pressed():
 	GODOT.BossDamage("",damage)
 	$bosshp.value = GODOT.getBossHP()
 	if (GODOT.getBossHP() <= 0):
+		Global.GAME_WON = true;
 		get_tree().change_scene_to_file("res://scenes/level_end.tscn")
 	
 	PLAYER.playerDamage(5)
 	$playerhp.value = PLAYER.hp
 	if (PLAYER.hp <= 0):
+		Global.GAME_WON = false;
 		get_tree().change_scene_to_file("res://scenes/level_end.tscn")
 
 func _on_elem_1_toggled(button_pressed):

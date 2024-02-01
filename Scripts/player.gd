@@ -9,3 +9,9 @@ func playerDamage(damage):
 
 	if (hp <= 0):
 		print("RiP Player")
+
+func getPlayerHP():
+	return hp
+
+func setPlayerHP(newhp):
+	hp = newhp
